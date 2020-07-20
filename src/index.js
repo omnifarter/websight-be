@@ -16,8 +16,10 @@ connectDb().then(async()=>{
 })
 
 
-app.get('/', async (req, res) => {
+app.get('/retirement', async (req, res) => {
     const retirement = await models.retirement.find({category:req.query.category});
     return res.send(retirement);
   });
+
+  
 
